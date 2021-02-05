@@ -54,12 +54,25 @@ body{
     color: white;
 }
 .main{
+    background: linear-gradient(#120078, #9d0191);
     height: 300px;
     margin: 0 auto 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .main__title{
     color: white;
     font-size: 25px;
+    margin-top: 0;
+    padding-top: 20px;
+}
+.categories__title{
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 30px;
+    width: 100%;
 }
 .input{
     background-color: rgba(255, 255, 255, 0.1);
@@ -184,6 +197,64 @@ body{
 }
 .login__container--inicio a:hover{
     text-decoration: underline;
+}
+body{
+    margin: 0;
+}
+.carousel{
+    background: linear-gradient(#9d0191, #fd3a69);
+    width: 100%;
+    overflow: scroll;
+    padding: 30px;
+    position: relative;
+}
+.carousel__container{
+    white-space: nowrap;
+    margin: 70px 0;
+    padding-bottom: 10px;
+}
+.carousel-item{
+    background-color: salmon;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
+}
+.carousel-item:hover ~ .carousel-item{
+    transform: translate3d(100px, 0, 0);
+}
+.carousel__container:hover .carousel-item{
+    opacity: 0.3;
+}
+.carousel__container:hover .carousel-item:hover{
+    transform: scale(1.5);
+    opacity: 1;
+}
+.carousel-item__img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+.carousel-item__details{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.carousel-item__details:hover{
+    opacity: 1;
 }
 .footer{
     background-color: #fd3a69;
